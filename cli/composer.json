@@ -1,0 +1,6 @@
+{
+    "name": "root/code",
+    "require": {
+        "aws/aws-sdk-php": "^3.36"
+    }
+}

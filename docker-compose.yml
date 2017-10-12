@@ -10,3 +10,14 @@ services:
     environment:
       - KBC_CONTAINER_MEMORY
       - KBC_CONTAINER_RUN_TIME
+  cli:
+    build:
+      context: ./cli
+    working_dir: /code
+    volumes:
+      - ./cli:/code
+    environment:
+      - AWS_ACCESS_KEY
+      - AWS_SECRET_KEY
+      - AWS_REGION
+
