@@ -1,0 +1,7 @@
+{
+    "name": "keboola/docker-runner-2-poc",
+    "type": "project",
+    "require": {
+        "symfony/process": "^3.3"
+    }
+}

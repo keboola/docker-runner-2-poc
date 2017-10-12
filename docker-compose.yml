@@ -1,0 +1,12 @@
+version: '2'
+services:
+  dev:
+    build: .
+    image: keboola/docker-runner-2-poc
+    volumes:
+      - ./:/code
+      - /var/run/docker.sock:/var/run/docker.sock
+    working_dir: /code
+    environment:
+      - KBC_CONTAINER_MEMORY
+      - KBC_CONTAINER_RUN_TIME
