@@ -8,7 +8,6 @@ services:
     volumes:
       - ./:/code
       - /var/run/docker.sock:/var/run/docker.sock
-    command: php ./run.php
     environment:
       - KBC_CONTAINER_MEMORY
       - KBC_CONTAINER_RUN_TIME

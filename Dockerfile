@@ -14,4 +14,4 @@ RUN ./composer.sh \
   && composer install --no-interaction \
   && apk del wget git unzip
 
-CMD php ./run.php
+CMD ["php","./run.php"]
