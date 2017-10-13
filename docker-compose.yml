@@ -3,13 +3,16 @@ services:
   dev:
     build: .
     image: keboola/docker-runner-2-poc
+    tty: true
+    stdin_open: true
     volumes:
       - ./:/code
       - /var/run/docker.sock:/var/run/docker.sock
-    working_dir: /code
+    command: php ./run.php
     environment:
       - KBC_CONTAINER_MEMORY
       - KBC_CONTAINER_RUN_TIME
+      - KBC_CONTAINER_TIMEOUT
   cli:
     build:
       context: ./cli
